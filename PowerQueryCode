@@ -22,7 +22,7 @@ let
     #"Replaced Value11" = Table.ReplaceValue(#"Replaced Value10","Purchases","",Replacer.ReplaceText,{"Commodity-Title", "Commodity-Description"}),
     #"Replaced Value12" = Table.ReplaceValue(#"Replaced Value11","Environmental Permits and Fees-","Environ Permits & Fees-",Replacer.ReplaceText,{"Commodity-Title", "Commodity-Description"}),
     #"Replaced Value13" = Table.ReplaceValue(#"Replaced Value12","GSD, ","",Replacer.ReplaceText,{"Commodity-Title", "Commodity-Description"}),
-    #"Replaced Value14" = Table.ReplaceValue(#"Replaced Value13"," and "," & ",Replacer.ReplaceText,{"Commodity-Title", "Commodity-Description"}),
+    #"Replaced Value14" = Table.ReplaceValue(#"Replaced Value13","and","&",Replacer.ReplaceText,{"Commodity-Title", "Commodity-Description"}),
     #"Replaced Value15" = Table.ReplaceValue(#"Replaced Value14","  "," ",Replacer.ReplaceText,{"Commodity-Title", "Commodity-Description"}),
     #"Replaced Value16" = Table.ReplaceValue(#"Replaced Value15","PCS HHG Shipments-","PCS HHG-",Replacer.ReplaceText,{"Commodity-Title", "Commodity-Description"}),
     #"Replaced Value17" = Table.ReplaceValue(#"Replaced Value16","Equipment","Equip",Replacer.ReplaceText,{"Commodity-Title", "Commodity-Description"}),
@@ -54,8 +54,6 @@ let
     #"Replaced Value43" = Table.ReplaceValue(#"Replaced Value42","Management","Mgmt",Replacer.ReplaceText,{"Commodity-Title", "Commodity-Description"}),
     #"Replaced Value44" = Table.ReplaceValue(#"Replaced Value43","Hazardous Waste","HazWaste",Replacer.ReplaceText,{"Commodity-Title", "Commodity-Description"}),
     #"Replaced Value46" = Table.ReplaceValue(#"Replaced Value44","Supplies","Sply",Replacer.ReplaceText,{"Commodity-Title", "Commodity-Description"}),
-    #"Replaced Value47" = Table.ReplaceValue(#"Replaced Value46","Supply","Sply",Replacer.ReplaceText,{"Commodity-Title", "Commodity-Description"}),
-    #"Replaced Value45" = Table.ReplaceValue(#"Replaced Value47","Aviation POL","AvPOL",Replacer.ReplaceText,{"Commodity-Title", "Commodity-Description"}),
-    #"Replaced Value48" = Table.ReplaceValue(#"Replaced Value45","Other","Oth",Replacer.ReplaceText,{"Commodity-Title", "Commodity-Description"})
+    #"Replaced Value47" = Table.ReplaceValue(#"Replaced Value46","Supply","Sply",Replacer.ReplaceText,{"Commodity-Title", "Commodity-Description"})
 in
-    #"Replaced Value48"
+    #"Replaced Value47"
